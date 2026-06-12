@@ -1,0 +1,88 @@
+import { Flower } from "@/types";
+
+export const flowersData: Flower[] = [
+  {
+    id: "1",
+    name: "Rosa Vermelha",
+    date: "2020-06-15",
+    description: "Aquele primeiro dia, quando você entrou na minha vida como uma rosa vermelha perfeita.",
+    color: "bg-red-500",
+  },
+  {
+    id: "2",
+    name: "Girassol",
+    date: "2020-07-22",
+    description: "Você é meu girassol, sempre buscando a luz e me trazendo alegria.",
+    color: "bg-yellow-400",
+  },
+  {
+    id: "3",
+    name: "Lótus",
+    date: "2020-08-10",
+    description: "Como um lótus, você cresceu em meu coração e floresceu em beleza.",
+    color: "bg-pink-400",
+  },
+  {
+    id: "4",
+    name: "Margarida",
+    date: "2020-09-15",
+    description: "Simples, pura e perfeita, como você.",
+    color: "bg-white",
+  },
+  {
+    id: "5",
+    name: "Orquídea",
+    date: "2020-10-20",
+    description: "Rara e exótica, você é minha orquídea especial.",
+    color: "bg-purple-500",
+  },
+  {
+    id: "6",
+    name: "Tulipa",
+    date: "2020-11-08",
+    description: "Elegante e graciosa, você me encanta todos os dias.",
+    color: "bg-pink-600",
+  },
+  {
+    id: "7",
+    name: "Flor de Cerejeira",
+    date: "2021-03-15",
+    description: "Efêmera e linda, cada momento com você é precioso.",
+    color: "bg-pink-300",
+  },
+  {
+    id: "8",
+    name: "Lírio",
+    date: "2021-04-22",
+    description: "Puro e majestoso, você é meu lírio branco.",
+    color: "bg-white",
+  },
+  {
+    id: "9",
+    name: "Dália",
+    date: "2021-05-10",
+    description: "Complexa e bela, com múltiplas camadas de perfeição.",
+    color: "bg-orange-500",
+  },
+  {
+    id: "10",
+    name: "Magnólia",
+    date: "2021-06-15",
+    description: "Antiga e nobre, nosso amor é como uma magnólia em flor.",
+    color: "bg-pink-200",
+  },
+  {
+    id: "11",
+    name: "Flor de Lótus Azul",
+    date: "2021-07-20",
+    description: "Rara e mística, você é meu tesouro azul.",
+    color: "bg-blue-500",
+  },
+  {
+    id: "12",
+    name: "Peônia",
+    date: "2021-08-25",
+    description: "Luxuosa e generosa, seu amor é como pétalas infinitas.",
+    color: "bg-red-400",
+  },
+];
