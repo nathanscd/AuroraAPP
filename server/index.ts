@@ -18,6 +18,18 @@ async function startServer() {
 
   app.use(express.static(staticPath));
 
+  app.get("/api/story-doc", async (req, res) => {
+    try {
+      const docUrl = "https://docs.google.com/document/d/e/2PACX-1vSDgPHggNQ1tn_0oU5BexRmiT4if_ysKUxhK3RuK8ys43KZrxvxLjlw5y3ReiZL4C0Qnny11XVnkLjc/pub";
+      const fetchRes = await fetch(docUrl);
+      const html = await fetchRes.text();
+      res.setHeader("Content-Type", "text/html; charset=utf-8");
+      res.send(html);
+    } catch (e) {
+      res.status(500).send("Failed to fetch doc");
+    }
+  });
+
   // Handle client-side routing - serve index.html for all routes
   app.get("*", (_req, res) => {
     res.sendFile(path.join(staticPath, "index.html"));

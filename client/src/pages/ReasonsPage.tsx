@@ -4,6 +4,7 @@ import { reasonsData } from "@/data/reasonsData";
 import { PageTitle, SearchBar, Badge } from "@/components/common";
 import { ReasonCard } from "@/components/reasons/ReasonCard";
 import { storage } from "@/utils/storage";
+import { Heart, Star } from "lucide-react";
 
 export default function ReasonsPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -24,7 +25,8 @@ export default function ReasonsPage() {
         const matchesSearch =
           reason.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           reason.description.toLowerCase().includes(searchQuery.toLowerCase());
-        const matchesCategory = !selectedCategory || reason.category === selectedCategory;
+        const matchesCategory =
+          !selectedCategory || reason.category === selectedCategory;
         return matchesSearch && matchesCategory;
       });
   }, [searchQuery, selectedCategory, favorites]);
@@ -41,21 +43,38 @@ export default function ReasonsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-pink-50 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-white via-rose-50/50 to-purple-50/50 pt-20 pb-50">
       <div className="container">
         <PageTitle
-          title="100 Motivos"
+          title="Motivos"
           subtitle="Por que você é tão especial para mim"
         />
 
+        {/* Hero stat pills */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-3 mb-10"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-400/15 text-purple-600 text-xs font-semibold backdrop-blur-sm">
+            <Heart className="w-3.5 h-3.5 fill-purple-400/30" />
+            <span>{reasonsData.length} motivos listados</span>
+          </div>
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-400/15 text-purple-600 text-xs font-semibold backdrop-blur-sm">
+            <Star className="w-3.5 h-3.5 fill-purple-400/30" />
+            <span>{favorites.size} favoritos</span>
+          </div>
+        </motion.div>
+
         {/* Search and Filters */}
         <motion.div
-          className="max-w-2xl mx-auto mb-12"
+          className="max-w-2xl mx-auto mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="mb-6">
+          <div className="mb-5">
             <SearchBar
               placeholder="Buscar motivos..."
               onSearch={setSearchQuery}
@@ -67,10 +86,10 @@ export default function ReasonsPage() {
               onClick={() => setSelectedCategory(null)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-4 py-2 rounded-full font-medium transition-colors ${
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                 selectedCategory === null
-                  ? "bg-red-500 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  ? "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-md shadow-purple-500/25"
+                  : "bg-purple-500/10 text-purple-600 border border-purple-400/15 hover:bg-purple-500/20 backdrop-blur-sm"
               }`}
             >
               Todos
@@ -81,10 +100,10 @@ export default function ReasonsPage() {
                 onClick={() => setSelectedCategory(category)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-4 py-2 rounded-full font-medium transition-colors ${
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                   selectedCategory === category
-                    ? "bg-red-500 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-md shadow-purple-500/25"
+                    : "bg-purple-500/10 text-purple-600 border border-purple-400/15 hover:bg-purple-500/20 backdrop-blur-sm"
                 }`}
               >
                 {category}
@@ -95,7 +114,7 @@ export default function ReasonsPage() {
 
         {/* Results Count */}
         <motion.p
-          className="text-center text-gray-600 mb-8"
+          className="text-center text-slate-500 text-xs mb-8 uppercase tracking-widest font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -104,7 +123,7 @@ export default function ReasonsPage() {
 
         {/* Reasons Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -114,7 +133,7 @@ export default function ReasonsPage() {
               key={reason.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              transition={{ duration: 0.4, delay: index * 0.04 }}
               viewport={{ once: true }}
             >
               <ReasonCard

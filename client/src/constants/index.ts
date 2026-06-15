@@ -35,6 +35,6 @@ export const EASING = {
 } as const;
 
 // App Constants
-export const APP_NAME = "Memórias Especiais";
-export const MAIN_TAGLINE = "Uma pequena coleção das memórias mais especiais que construímos juntos.";
-export const RELATIONSHIP_START_DATE = new Date("2020-06-15");
+export const APP_NAME = "Aurora";
+export const MAIN_TAGLINE = "Uma coleção das memórias mais brilhantes e especiais da nossa jornada.";
+export const RELATIONSHIP_START_DATE = new Date("2022-03-07");

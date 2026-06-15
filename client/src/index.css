@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -40,77 +41,91 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-man: var(--man);
+  --color-woman: var(--woman);
+  --color-man-light: var(--man-light);
+  --color-woman-light: var(--woman-light);
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", Inter, system-ui, sans-serif;
 }
 
 :root {
-  --primary: oklch(0.577 0.245 27.325);
-  --primary-foreground: oklch(1 0 0);
-  --sidebar-primary: oklch(0.577 0.245 27.325);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --chart-1: oklch(0.7 0.2 25);
-  --chart-2: oklch(0.65 0.18 28);
-  --chart-3: oklch(0.6 0.16 30);
-  --chart-4: oklch(0.55 0.14 32);
-  --chart-5: oklch(0.5 0.12 35);
+  --primary: oklch(0.65 0.15 330); /* Romantic soft pink/purple */
+  --primary-foreground: oklch(0.99 0.01 340);
+  --sidebar-primary: oklch(0.65 0.15 330);
+  --sidebar-primary-foreground: oklch(0.99 0.01 340);
+  --chart-1: oklch(0.7 0.2 340);
+  --chart-2: oklch(0.65 0.18 330);
+  --chart-3: oklch(0.6 0.16 320);
+  --chart-4: oklch(0.55 0.14 310);
+  --chart-5: oklch(0.5 0.12 300);
   --radius: 0.65rem;
-  --background: oklch(0.99 0.001 0);
-  --foreground: oklch(0.235 0.015 65);
+  
+  /* Bright background */
+  --background: oklch(0.99 0.01 340);
+  --foreground: oklch(0.25 0.02 300);
+  
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.25 0.02 300);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.577 0.245 27.325);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.95 0.01 25);
-  --accent-foreground: oklch(0.577 0.245 27.325);
-  --destructive: oklch(0.577 0.245 27.325);
+  --popover-foreground: oklch(0.25 0.02 300);
+  --secondary: oklch(0.96 0.02 340);
+  --secondary-foreground: oklch(0.4 0.1 330);
+  --muted: oklch(0.96 0.02 340);
+  --muted-foreground: oklch(0.5 0.05 320);
+  --accent: oklch(0.95 0.03 340);
+  --accent-foreground: oklch(0.4 0.1 330);
+  --destructive: oklch(0.6 0.18 20);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.7 0.2 25);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.95 0.01 25);
-  --sidebar-accent-foreground: oklch(0.577 0.245 27.325);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.7 0.2 25);
+  --border: oklch(0.9 0.03 340);
+  --input: oklch(0.9 0.03 340);
+  --ring: oklch(0.65 0.15 330);
+  --sidebar: oklch(0.99 0.01 340);
+  --sidebar-foreground: oklch(0.25 0.02 300);
+  --sidebar-accent: oklch(0.95 0.03 340);
+  --sidebar-accent-foreground: oklch(0.4 0.1 330);
+  --sidebar-border: oklch(0.9 0.03 340);
+  --sidebar-ring: oklch(0.65 0.15 330);
+
+  /* Gender Colors (kept but slightly pastel) */
+  --man: oklch(0.65 0.18 25);
+  --man-light: oklch(0.97 0.02 25);
+  --woman: oklch(0.65 0.16 230);
+  --woman-light: oklch(0.97 0.02 230);
 }
 
+/* Fallback to light mode styles for .dark to prevent dark flashing */
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
+  --primary: oklch(0.65 0.15 330);
+  --primary-foreground: oklch(0.99 0.01 340);
+  --background: oklch(0.99 0.01 340);
+  --foreground: oklch(0.25 0.02 300);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.02 300);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.02 300);
+  --secondary: oklch(0.96 0.02 340);
+  --secondary-foreground: oklch(0.4 0.1 330);
+  --muted: oklch(0.96 0.02 340);
+  --muted-foreground: oklch(0.5 0.05 320);
+  --accent: oklch(0.95 0.03 340);
+  --accent-foreground: oklch(0.4 0.1 330);
+  --destructive: oklch(0.6 0.18 20);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --border: oklch(0.9 0.03 340);
+  --input: oklch(0.9 0.03 340);
+  --ring: oklch(0.65 0.15 330);
+  --chart-1: oklch(0.7 0.2 340);
+  --chart-2: oklch(0.65 0.18 330);
+  --chart-3: oklch(0.6 0.16 320);
+  --chart-4: oklch(0.55 0.14 310);
+  --chart-5: oklch(0.5 0.12 300);
+  --sidebar: oklch(0.99 0.01 340);
+  --sidebar-foreground: oklch(0.25 0.02 300);
+  --sidebar-accent: oklch(0.95 0.03 340);
+  --sidebar-accent-foreground: oklch(0.4 0.1 330);
+  --sidebar-border: oklch(0.9 0.03 340);
+  --sidebar-ring: oklch(0.65 0.15 330);
 }
 
 @layer base {
@@ -118,7 +133,17 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden overflow-y-auto;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 10% 20%, oklch(0.97 0.03 340 / 0.5), transparent 70%),
+                radial-gradient(circle at 90% 80%, oklch(0.95 0.05 320 / 0.4), transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+    animation: gradientShift 30s ease-in-out infinite alternate;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -134,24 +159,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem; 
     padding-right: 1rem;
   }
 
@@ -174,4 +186,99 @@
       max-width: 1280px; /* Standard content width */
     }
   }
+
+  /* ── Premium glass card ── */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(244, 114, 182, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+  }
+
+  /* ── Romantic glow text ── */
+  .glow-text {
+    text-shadow: 0 0 20px rgba(244, 114, 182, 0.3), 0 0 40px rgba(192, 132, 252, 0.2);
+  }
+
+  /* ── Gradient text utility ── */
+  .gradient-text {
+    background: linear-gradient(135deg, oklch(0.65 0.15 330), oklch(0.6 0.15 300), oklch(0.65 0.18 340));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Purple ambient glow orb ── */
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+  }
+
+  /* ── Shimmer loading / decorative effect ── */
+  .shimmer {
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 40%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.4) 60%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmerMove 3s ease-in-out infinite;
+  }
+
+  /* ── Seven badge (lucky number) ── */
+  .seven-badge {
+    background: linear-gradient(135deg, oklch(0.65 0.15 330), oklch(0.6 0.15 300));
+    color: white;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.2), 0 4px 15px rgba(192, 132, 252, 0.2);
+    animation: sevenPulse 3s ease-in-out infinite;
+  }
+
+  /* ── Music bar (Best Friend) ── */
+  .music-bar {
+    display: inline-block;
+    width: 3px;
+    border-radius: 3px;
+    background: currentColor;
+    animation: musicBounce 0.9s ease-in-out infinite alternate;
+  }
+  .music-bar:nth-child(2) { animation-delay: 0.15s; }
+  .music-bar:nth-child(3) { animation-delay: 0.3s; }
+  .music-bar:nth-child(4) { animation-delay: 0.45s; }
+  .music-bar:nth-child(5) { animation-delay: 0.6s; }
+}
+
+@keyframes shimmerMove {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes sevenPulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.2), 0 4px 15px rgba(192, 132, 252, 0.2); }
+  50% { box-shadow: 0 0 0 6px rgba(244, 114, 182, 0.35), 0 6px 20px rgba(192, 132, 252, 0.3); }
+}
+
+@keyframes musicBounce {
+  from { height: 4px; }
+  to { height: 16px; }
+}
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }

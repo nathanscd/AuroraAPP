@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { Navbar, Footer } from "./components/common";
 import { ROUTES } from "./constants";
+import BackgroundOrbs from "./components/common/BackgroundOrbs";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -41,7 +42,8 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen relative overflow-hidden">
+            <BackgroundOrbs />
             <Router />
           </div>
         </TooltipProvider>
@@ -49,5 +51,6 @@ function App() {
     </ErrorBoundary>
   );
 }
+
 
 export default App;

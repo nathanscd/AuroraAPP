@@ -1,4 +1,4 @@
-import { Reason } from "@/types";
+import { Reason } from "../types";
 
 export const reasonsData: Reason[] = [
   {
@@ -7,6 +7,7 @@ export const reasonsData: Reason[] = [
     title: "Seu Sorriso",
     description: "Aquele sorriso que ilumina meu dia, que me faz esquecer de todos os problemas.",
     category: "Físico",
+    gender: "woman",
   },
   {
     id: "2",
@@ -14,6 +15,7 @@ export const reasonsData: Reason[] = [
     title: "Sua Inteligência",
     description: "A forma como você pensa, analisa e resolve problemas me inspira todos os dias.",
     category: "Intelectual",
+    gender: "woman",
   },
   {
     id: "3",
@@ -21,20 +23,23 @@ export const reasonsData: Reason[] = [
     title: "Seu Senso de Humor",
     description: "Você me faz rir em momentos que eu mais preciso. Você é meu melhor remédio.",
     category: "Personalidade",
+    gender: "woman",
   },
   {
     id: "4",
     number: 4,
-    title: "Sua Bondade",
-    description: "A forma como você trata as pessoas, com respeito e carinho, é simplesmente admirável.",
+    title: "Sua determinação",
+    description: "A forma como você não desiste dos seus objetivos e me inspira a continuar eternamente.",
     category: "Caráter",
+    gender: "woman",
   },
   {
     id: "5",
     number: 5,
     title: "Seus Olhos",
-    description: "Neles eu vejo o futuro, a esperança, o amor. São hipnotizantes.",
+    description: "Neles eu vejo o futuro, a esperança, o amor minha futura esposa, a pessoa que irei passar o resto de minha vida.",
     category: "Físico",
+    gender: "woman",
   },
   {
     id: "6",
@@ -42,13 +47,15 @@ export const reasonsData: Reason[] = [
     title: "Sua Lealdade",
     description: "Você está ao meu lado em todos os momentos, nos bons e nos ruins.",
     category: "Caráter",
+    gender: "woman",
   },
   {
     id: "7",
     number: 7,
-    title: "Sua Criatividade",
-    description: "A forma como você cria soluções inovadoras é simplesmente impressionante.",
-    category: "Intelectual",
+    title: "Ser a minha melhor amiga",
+    description: "Você é mais do que meu amor — você é minha melhor amiga. Eu te amo eternamente, é como se fosse uma amizade que nunca acaba, nunca esfria, sempre forte.",
+    category: "Relacionamento",
+    gender: "woman",
   },
   {
     id: "8",
@@ -56,6 +63,7 @@ export const reasonsData: Reason[] = [
     title: "Sua Paciência",
     description: "Você me aguenta em meus piores dias e ainda me ama. Que privilégio.",
     category: "Caráter",
+    gender: "woman",
   },
   {
     id: "9",
@@ -63,6 +71,7 @@ export const reasonsData: Reason[] = [
     title: "Seus Abraços",
     description: "Seus abraços são meu refúgio, meu lugar seguro no mundo.",
     category: "Físico",
+    gender: "woman",
   },
   {
     id: "10",
@@ -70,20 +79,23 @@ export const reasonsData: Reason[] = [
     title: "Sua Ambição",
     description: "Você sonha grande e trabalha duro para alcançar seus objetivos. Isso me motiva.",
     category: "Personalidade",
+    gender: "woman",
   },
   {
     id: "11",
     number: 11,
     title: "Sua Empatia",
-    description: "Você entende meus sentimentos sem que eu precise falar. É como magia.",
+    description: "Você entende meus sentimentos sem que eu precise falar.",
     category: "Caráter",
+    gender: "woman",
   },
   {
     id: "12",
     number: 12,
     title: "Seu Apoio",
-    description: "Você acredita em mim quando nem eu acredito. Você é meu maior torcedor.",
+    description: "Você acredita em mim quando nem eu acredito. Você é minha maior torcedora.",
     category: "Relacionamento",
+    gender: "woman",
   },
   {
     id: "13",
@@ -91,13 +103,15 @@ export const reasonsData: Reason[] = [
     title: "Seu Toque",
     description: "Quando você me toca, todo o caos desaparece e só existe você e eu.",
     category: "Físico",
+    gender: "woman",
   },
   {
     id: "14",
     number: 14,
     title: "Sua Honestidade",
-    description: "Você sempre fala a verdade, mesmo quando é difícil. Isso é raro e precioso.",
+    description: "Você sempre fala a verdade, mesmo quando é difícil. Isso é raro.",
     category: "Caráter",
+    gender: "woman",
   },
   {
     id: "15",
@@ -105,5 +119,22 @@ export const reasonsData: Reason[] = [
     title: "Sua Paixão",
     description: "A forma como você se dedica ao que ama é contagiante e inspiradora.",
     category: "Personalidade",
+    gender: "woman",
+  },
+  {
+    id: "16",
+    number: 16,
+    title: "Sua Força",
+    description: "A forma como você lida com as dificuldades me inspira.",
+    category: "Caráter",
+    gender: "woman",
+  },
+  {
+    id: "17",
+    number: 17,
+    title: "Nosso amor",
+    description: "É a coisa mais linda, parece tirado diretamente de filmes de romance.",
+    category: "Relacionamento",
+    gender: "woman",
   },
 ];
