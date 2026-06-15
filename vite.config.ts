@@ -24,8 +24,13 @@ function googleDocsProxyPlugin(): Plugin {
   };
 }
 
-export default defineConfig({
-  plugins: [react(), tailwindcss(), jsxLocPlugin(), googleDocsProxyPlugin()],
+export default defineConfig(({ command }) => ({
+  plugins: [
+    react(),
+    tailwindcss(),
+    command === "serve" ? jsxLocPlugin() : null,
+    googleDocsProxyPlugin()
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -49,4 +54,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));

@@ -1,5 +1,4 @@
-import { CompositionEvent, CompositionEventHandler, KeyboardEvent, KeyboardEventHandler } from "react";
-import { useRef } from "react";
+import { CompositionEvent, CompositionEventHandler, KeyboardEvent, KeyboardEventHandler, useRef } from "react";
 import { usePersistFn } from "./usePersistFn";
 
 export interface UseCompositionReturn<

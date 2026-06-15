@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
 
 interface CardProps {
   children: ReactNode;
