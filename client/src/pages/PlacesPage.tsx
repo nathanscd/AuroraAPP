@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { placesData } from "../data/placesData";
-import { PageTitle, Modal, ImagePlaceholder, Badge } from "@/components/common";
-import { JourneyMap } from "@/components/map/JourneyMap";
+import { PageTitle, Modal, ImagePlaceholder, Badge } from "../components/common";
+import { JourneyMap } from "../components/map/JourneyMap";
 import { formatDate } from "../utils/dateFormatter";
 import { Place } from "../types";
 import { MapPin, Calendar, Heart } from "lucide-react";

@@ -1,4 +1,4 @@
-import { RELATIONSHIP_START_DATE } from "@/constants";
+import { RELATIONSHIP_START_DATE } from "../constants";
 
 export function calculateDaysTogether(startDate: Date): number {
   const start = new Date(startDate);

@@ -1,9 +1,9 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { reasonsData } from "@/data/reasonsData";
-import { PageTitle, SearchBar, Badge } from "@/components/common";
-import { ReasonCard } from "@/components/reasons/ReasonCard";
-import { storage } from "@/utils/storage";
+import { reasonsData } from "../data/reasonsData";
+import { PageTitle, SearchBar, Badge } from "../components/common";
+import { ReasonCard } from "../components/reasons/ReasonCard";
+import { storage } from "../utils/storage";
 import { Heart, Star } from "lucide-react";
 
 export default function ReasonsPage() {

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { flowersData } from "@/data/flowersData";
-import { Modal, Badge } from "@/components/common";
-import { BoutiqueFlower, colorMap } from "@/components/garden/BoutiqueFlower";
-import { formatDate } from "@/utils/dateFormatter";
-import { Flower } from "@/types";
+import { flowersData } from "../data/flowersData";
+import { Modal, Badge } from "../components/common";
+import { BoutiqueFlower, colorMap } from "../components/garden/BoutiqueFlower";
+import { formatDate } from "../utils/dateFormatter";
+import { Flower } from "../types";
 import { Music, X } from "lucide-react";
 
 /* ── Distribute flowers across shelves ──────────────────── */

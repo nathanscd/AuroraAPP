@@ -1,4 +1,4 @@
-import { TimelineItem } from "@/types";
+import { TimelineItem } from "../types";
 
 export const timelineData: TimelineItem[] = [
   {

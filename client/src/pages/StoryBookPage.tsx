@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { PageTitle } from "@/components/common";
-import { Book3D } from "@/components/storybook/Book3D";
-import { fetchAndParseStoryDoc, ParsedPage } from "@/utils/googleDocsParser";
+import { PageTitle } from "../components/common";
+import { Book3D } from "../components/storybook/Book3D";
+import { fetchAndParseStoryDoc, ParsedPage } from "../utils/googleDocsParser";
 import { BookOpen } from "lucide-react";
 
 export default function StoryBookPage() {

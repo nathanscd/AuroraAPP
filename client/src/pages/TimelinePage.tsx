@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { timelineData } from "../data/timelineData";
-import { PageTitle } from "@/components/common";
-import { TimelineCard } from "@/components/timeline/TimelineCard";
+import { PageTitle } from "../components/common";
+import { TimelineCard } from "../components/timeline/TimelineCard";
 import { Star } from "lucide-react";
 
 export default function TimelinePage() {
