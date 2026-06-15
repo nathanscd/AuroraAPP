@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar, Heart, MessageCircle, Navigation, Camera, Sparkles, Home } from "lucide-react";
-import { TimelineItem } from "@/types";
-import { formatDate } from "@/utils/dateFormatter";
+import { TimelineItem } from "../../types";
+import { formatDate } from "../../utils/dateFormatter";
 
 interface TimelineCardProps {
   item: TimelineItem;

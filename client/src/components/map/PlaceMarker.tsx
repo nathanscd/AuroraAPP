@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import { Place } from "@/types";
-import { formatDate } from "@/utils/dateFormatter";
+import { Place } from "../../types";
+import { formatDate } from "../../utils/dateFormatter";
 
 interface PlaceMarkerProps {
   place: Place;

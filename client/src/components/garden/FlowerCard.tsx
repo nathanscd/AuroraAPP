@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Flower } from "@/types";
+import { Flower } from "../../types";
 
 interface FlowerCardProps {
   flower: Flower;

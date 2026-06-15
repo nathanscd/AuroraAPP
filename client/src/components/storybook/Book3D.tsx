@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PageLeaf } from "./PageLeaf";
-import { ParsedPage, DocBlock } from "@/utils/googleDocsParser";
+import { ParsedPage, DocBlock } from "../../utils/googleDocsParser";
 
 interface Book3DProps {
   pages: ParsedPage[];

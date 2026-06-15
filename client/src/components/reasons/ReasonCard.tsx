@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart, Star } from "lucide-react";
-import { Reason } from "@/types";
+import { Reason } from "../../types";
 
 interface ReasonCardProps {
   reason: Reason & { isFavorite?: boolean };

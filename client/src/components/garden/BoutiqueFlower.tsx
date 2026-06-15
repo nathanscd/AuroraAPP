@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Flower } from "@/types";
+import { Flower } from "../../types";
 
 /* ── Color map ── */
 export const colorMap: Record<string, { petal: string; center: string; stem: string }> = {

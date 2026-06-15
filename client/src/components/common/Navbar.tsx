@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, Menu, X, Music } from "lucide-react";
-import { ROUTES } from "@/constants";
+import { ROUTES } from "../../constants";
 
 export function Navbar() {
   const [location] = useLocation();
