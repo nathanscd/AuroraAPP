@@ -26,7 +26,9 @@ function googleDocsProxyPlugin(): Plugin {
 
 export default defineConfig(({ command }) => ({
   plugins: [
-    react(),
+    react({
+      jsxRuntime: 'automatic',
+    }),
     tailwindcss(),
     command === "serve" ? jsxLocPlugin() : null,
     googleDocsProxyPlugin()
