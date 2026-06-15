@@ -1,9 +1,10 @@
+import { ReactNode } from "react";
 import { Heart } from "lucide-react";
 
 interface EmptyStateProps {
   title: string;
   description?: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }
 
 export function EmptyState({ title, description, icon }: EmptyStateProps) {
